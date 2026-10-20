@@ -1,0 +1,21 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#F4F4F2;color:#1A1A1A;font-family:'Figtree','Segoe UI',sans-serif;font-size:16px;line-height:1.5}
+.cab{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;background:#FFFFFF;border-bottom:1px solid #E7E4DE}
+.cab img{height:30px;width:auto;display:block}
+.voltar{font-weight:600;font-size:15px;text-decoration:underline;text-decoration-color:#D4A22A;text-decoration-thickness:2px;text-underline-offset:5px;color:#1A1A1A;padding:8px 0}
+main{max-width:520px;margin:0 auto;padding:0 0 40px}
+.intro{padding:28px 16px 8px}
+h1{font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:34px;line-height:1.1;margin:0}
+.intro p{margin:10px 0 0;color:#5E5B57}
+.intro .aviso{font-size:14px}
+.post{background:#FFFFFF;margin-top:20px;border-top:1px solid #E7E4DE;border-bottom:1px solid #E7E4DE}
+@media (min-width:540px){.post{border:1px solid #E7E4DE;border-radius:4px}}
+.post-topo{display:flex;align-items:center;gap:10px;padding:12px 14px;font-size:14px}
+.avatar{width:32px;height:32px;border-radius:50%;background:#FFFFFF url('../assets/img/favicon.png') center/70% no-repeat;border:1px solid #D4A22A}
+.qtd{margin-left:auto;color:#5E5B57;font-size:13px}
+.trilho{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;outline-offset:-3px}
+.trilho::-webkit-scrollbar{display:none}
+.trilho img{flex:0 0 100%;width:100%;height:auto;aspect-ratio:4/5;scroll-snap-align:start;display:block;background:#EEE}
+.trilho:focus-visible{outline:3px solid #D4A22A}
+.legenda{margin:0;padding:12px 14px 16px;font-size:15px}
+.pe{text-align:center;color:#5E5B57;font-size:13px;padding:0 16px 32px}
