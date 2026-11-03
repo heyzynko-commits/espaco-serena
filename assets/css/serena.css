@@ -105,7 +105,7 @@ p { margin: 0; }
 .abertura h1 {
   font-size: clamp(2rem, 1.4rem + 2.6vw, 3.2rem);
   line-height: 1.12; letter-spacing: -0.01em;
-  max-width: 17ch;
+  max-width: 19ch; text-wrap: balance;
 }
 
 .abertura .lede { margin-top: 16px; }
