@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alice&family=Allura&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/vendor/pannellum/pannellum.css">
-<link rel="stylesheet" href="assets/css/serena.css?v=6">
+<link rel="stylesheet" href="assets/css/serena.css?v=8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +51,6 @@
     <nav class="menu" aria-label="Principal">
       <a href="#espaco">O espaço</a>
       <a href="#tratamentos">Tratamentos</a>
-      <a href="#agendar">Como agendar</a>
       <a href="#perguntas">Perguntas</a>
       <a href="#onde">Onde fica</a>
     </nav>
@@ -63,20 +62,24 @@
 
   <section class="abertura" data-abertura>
     <div class="wrap abertura-in">
-      <picture class="abertura-foto">
-        <source media="(max-width: 719px)" srcset="assets/img/fotos/recepcao-retrato.jpg" width="1000" height="1300">
-        <img src="assets/img/fotos/recepcao.jpg" alt="Recepção do Espaço Serena, com o logo na parede, o balcão e as poltronas" width="1600" height="1100" fetchpriority="high">
-      </picture>
       <div class="abertura-texto">
         <h1>Estética, unhas e micropigmentação no Jardim Nova Europa, em Campinas</h1>
-        <p class="lede">A Bárbara e a equipe cuidam da sua pele, do seu corpo, das suas unhas e das suas sobrancelhas, tudo no mesmo endereço.</p>
+        <p class="lede">Limpeza de pele, massagem, design de sobrancelha, micropigmentação e esmalteria com a Bárbara e a equipe dela.</p>
         <div class="acoes">
           <a class="botao botao-ouro" href="https://wa.me/5519990183999?text=Oi!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">Agendar pelo WhatsApp</a>
           <a class="botao botao-linha" href="https://online.maapp.com.br/EspacoSerena">Agendar online</a>
         </div>
-        <p class="status" data-status>Terça a sexta, das 8h às 17h. Sábado, das 8h ao meio-dia.</p>
-        <p class="abertura-endereco">Av. Estados Unidos, 241, Jardim Nova Europa. <a href="https://www.google.com/maps/search/?api=1&amp;query=Espa%C3%A7o%20Serena%2C%20Av.%20Estados%20Unidos%2C%20241%2C%20Campinas">Como chegar</a></p>
       </div>
+      <aside class="abertura-info" aria-label="Horário e endereço">
+        <p class="status" data-status>Terça a sexta, das 8h às 17h. Sábado, das 8h ao meio-dia.</p>
+        <dl class="horario">
+          <div><dt>Terça a sexta</dt><dd>8h às 12h e 13h às 17h</dd></div>
+          <div><dt>Sábado</dt><dd>8h às 12h</dd></div>
+        </dl>
+        <p class="info-regra">Pra garantir o horário, a gente pede R$ 50 no PIX. O valor volta como desconto no dia do atendimento.</p>
+        <p class="info-endereco">Av. Estados Unidos, 241<br>Jardim Nova Europa, Campinas</p>
+        <a class="info-link" href="https://www.google.com/maps/search/?api=1&amp;query=Espa%C3%A7o%20Serena%2C%20Av.%20Estados%20Unidos%2C%20241%2C%20Campinas">Como chegar</a>
+      </aside>
     </div>
   </section>
 
@@ -152,46 +155,7 @@
     </div>
   </section>
 
-  <section class="secao secao-escura" id="agendar">
-    <div class="wrap">
-      <div class="secao-topo">
-        <h2>Como agendar</h2>
-        <p class="lede">Do mesmo jeito pelo WhatsApp ou pela agenda online.</p>
-      </div>
-      <ol class="passos">
-        <li>
-          <h3>Escolha o horário</h3>
-          <p>Pelo WhatsApp ou pela agenda online, que mostra os horários livres dos próximos 30&nbsp;dias.</p>
-        </li>
-        <li>
-          <h3>Confirme com R$ 50 no PIX</h3>
-          <p>Manda o comprovante no WhatsApp em até 2 horas e a vaga fica garantida.</p>
-        </li>
-        <li>
-          <h3>Os R$ 50 voltam no dia</h3>
-          <p>O valor volta pra você como cashback no dia do atendimento.</p>
-        </li>
-      </ol>
-      <a class="botao botao-ouro" href="https://wa.me/5519990183999?text=Oi!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">Ver horários no WhatsApp</a>
-    </div>
-  </section>
-
-  <section class="secao" aria-label="Clube Serena e vale-presente">
-    <div class="wrap duplas">
-      <a class="dupla dupla-ouro" href="https://wa.me/5519990183999?text=Oi!%20Vim%20pelo%20site%20e%20quero%20saber%20do%20Clube%20Serena">
-        <span class="dupla-titulo">Clube Serena</span>
-        <span class="dupla-texto">Um clube pra quem já é cliente do Espaço Serena. Pergunta no WhatsApp como funciona.</span>
-        <span class="dupla-acao">Quero saber do clube</span>
-      </a>
-      <a class="dupla dupla-escura" href="https://wa.me/5519990183999?text=Oi!%20Vim%20pelo%20site%20e%20quero%20um%20vale-presente">
-        <span class="dupla-titulo">Vale-presente</span>
-        <span class="dupla-texto">Dá de presente um tratamento do Espaço Serena. A gente monta o vale pelo WhatsApp.</span>
-        <span class="dupla-acao">Quero um vale-presente</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="secao secao-colada" id="perguntas">
+  <section class="secao" id="perguntas">
     <div class="wrap estreito">
       <h2>Perguntas frequentes</h2>
       <div class="perguntas">
@@ -206,6 +170,10 @@
         <details>
           <summary>Agendei online e desisti. Recebo o valor de volta?</summary>
           <p>Recebe. Você tem até 7 dias depois da reserva pra desistir e pedir o valor de volta, desde que seja antes do atendimento.</p>
+        </details>
+        <details>
+          <summary>Dá pra dar um tratamento de presente?</summary>
+          <p>Dá. A gente monta o vale-presente pelo WhatsApp, com o tratamento que você escolher.</p>
         </details>
         <details>
           <summary>Quem vai me atender?</summary>
@@ -252,6 +220,6 @@
 </a>
 
 <script src="assets/vendor/pannellum/pannellum.js" defer></script>
-<script src="assets/js/serena.js?v=6" defer></script>
+<script src="assets/js/serena.js?v=8" defer></script>
 </body>
 </html>

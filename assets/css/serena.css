@@ -93,32 +93,41 @@ p { margin: 0; }
   text-decoration: none; font-size: .95rem;
 }
 
-/* Abertura: a foto da recepção dela é a primeira coisa que aparece */
+/* Abertura */
 
-.abertura { padding: 0 0 52px; border-bottom: 1px solid var(--linha); }
+.abertura { padding: 44px 0 56px; border-bottom: 1px solid var(--linha); }
 
-.abertura-in { display: grid; gap: 28px; }
-
-.abertura-foto { display: block; margin: 0 calc(var(--lado) * -1); }
-.abertura-foto img { width: 100%; aspect-ratio: 10 / 11; object-fit: cover; }
+.abertura-in { display: grid; gap: 36px; }
 
 .abertura h1 {
-  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.2rem);
+  font-size: clamp(2.05rem, 1.4rem + 3vw, 3.5rem);
   line-height: 1.12; letter-spacing: -0.01em;
   max-width: 19ch; text-wrap: balance;
 }
 
-.abertura .lede { margin-top: 16px; }
+.abertura .lede { margin-top: 18px; }
 
-.acoes { margin-top: 26px; display: flex; flex-direction: column; gap: 10px; }
+.acoes { margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
 
-.status { margin-top: 22px; display: flex; align-items: center; gap: 10px; color: var(--texto-suave); }
+.abertura-info {
+  padding: 22px 22px 20px;
+  background: var(--areia);
+  border-left: 3px solid var(--dourado);
+  border-radius: 0 var(--raio) var(--raio) 0;
+  font-size: 1rem;
+}
+
+.status { display: flex; align-items: center; gap: 10px; color: var(--texto-suave); }
 .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; flex: none; background: #B9B2B3; }
 .status.aberto { color: var(--grafite); }
 .status.aberto::before { background: #3E9B5F; }
 
-.abertura-endereco { margin-top: 6px; color: var(--texto-suave); font-size: 1rem; }
-.abertura-endereco a { color: var(--dourado-texto); text-underline-offset: 4px; }
+.abertura-info .horario { margin: 14px 0 0; }
+.abertura-info .horario div { border-bottom-color: var(--linha); }
+.abertura-info .horario dt { color: var(--texto-suave); }
+.info-regra { margin-top: 14px; color: var(--texto-suave); }
+.info-endereco { margin-top: 14px; }
+.info-link { display: inline-block; margin-top: 8px; color: var(--dourado-texto); text-underline-offset: 4px; }
 
 /* Seções */
 
@@ -251,7 +260,6 @@ p { margin: 0; }
 
 @media (min-width: 720px) {
   :root { --lado: 32px; }
-  .abertura-foto img { aspect-ratio: 16 / 9; }
   .acoes { flex-direction: row; }
   .card { flex-basis: 46%; }
   .duplas { grid-template-columns: 1fr 1fr; }
@@ -264,11 +272,8 @@ p { margin: 0; }
 @media (min-width: 1040px) {
   .menu { display: flex; }
   .topo-agendar { margin-left: 0; }
-  .abertura { padding: 56px 0 72px; }
-  .abertura-in { grid-template-columns: 1fr 1.1fr; align-items: center; gap: 56px; }
-  .abertura-texto { order: -1; }
-  .abertura-foto { margin: 0; }
-  .abertura-foto img { aspect-ratio: 16 / 11; border-radius: var(--raio); }
+  .abertura { padding: 88px 0 96px; }
+  .abertura-in { grid-template-columns: 1.6fr 1fr; align-items: end; gap: 64px; }
   .secao { padding: 96px 0; }
   .secao-colada { padding-top: 0; }
   .secao-topo { grid-template-columns: 1fr 1fr; align-items: end; gap: 40px; }
