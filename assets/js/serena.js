@@ -46,17 +46,15 @@
     if (s) { el.textContent = s.texto; el.classList.toggle('aberto', s.aberto); }
   }
 
-  var topo = document.querySelector('[data-topo]');
+  // O WhatsApp flutuante aparece quando os botões da abertura saem da tela
   var whats = document.querySelector('[data-whats]');
   var abertura = document.querySelector('[data-abertura]');
+  if (!whats) return;
   if (abertura && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entradas) {
-      var passou = !entradas[0].isIntersecting;
-      topo.classList.toggle('rolou', passou);
-      whats.classList.toggle('visivel', passou);
-    }, { rootMargin: '-80px 0px 0px 0px' }).observe(abertura);
+      whats.classList.toggle('visivel', !entradas[0].isIntersecting);
+    }, { rootMargin: '-70px 0px 0px 0px' }).observe(abertura);
   } else {
-    topo.classList.add('rolou');
     whats.classList.add('visivel');
   }
 })();
