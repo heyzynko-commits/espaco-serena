@@ -100,9 +100,9 @@ p { margin: 0; }
 .abertura-in { display: grid; gap: 36px; }
 
 .abertura h1 {
-  font-size: clamp(2.05rem, 1.4rem + 3vw, 3.5rem);
-  line-height: 1.12; letter-spacing: -0.01em;
-  max-width: 19ch; text-wrap: balance;
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  line-height: 1.2;
+  max-width: 22ch; text-wrap: balance;
 }
 
 .abertura .lede { margin-top: 18px; }
