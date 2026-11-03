@@ -84,10 +84,9 @@ p { margin: 0; }
 /* Sobre: foto à esquerda, cartão branco à direita */
 .sobre { padding: 56px 0; }
 .sobre-in { display: grid; gap: 16px; }
-.sobre-foto { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--raio); }
 .sobre-cartao { background: var(--papel); border-radius: var(--raio); padding: 40px 26px; display: grid; gap: 18px; align-content: center; }
 .sobre-cartao .titulo { margin-bottom: 8px; }
-.sobre-cartao > p { max-width: 46ch; }
+.sobre-texto { display: grid; gap: 16px; max-width: 56ch; }
 .sobre-info { margin-top: 10px; padding-top: 18px; border-top: 1px solid var(--linha); color: var(--texto-suave); font-size: .98rem; display: grid; gap: 4px; }
 .status { display: flex; align-items: center; gap: 10px; }
 .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; flex: none; background: #B9B2B3; }
@@ -177,9 +176,7 @@ p { margin: 0; }
   .abertura-base { grid-template-columns: 1.15fr 1fr; align-items: end; gap: 60px; }
   .abertura-lado .pilula { width: 100%; }
   .sobre { padding: 80px 0; }
-  .sobre-in { grid-template-columns: 5fr 7fr; gap: 20px; }
-  .sobre-foto { height: 100%; aspect-ratio: auto; min-height: 620px; }
-  .sobre-cartao { padding: 72px 80px; }
+  .sobre-cartao { padding: 72px 80px; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
   .tratamentos { padding: 96px 0 104px; }
   .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: var(--wrap); margin: 0 auto; overflow: visible; padding-bottom: 4px; }
   .card { flex-basis: auto; }
