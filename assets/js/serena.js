@@ -46,44 +46,6 @@
     if (s) { el.textContent = s.texto; el.classList.toggle('aberto', s.aberto); }
   }
 
-  // Tour 360° (Pannellum). Só carrega as fotos quando a pessoa chega perto da seção.
-  var tour = document.querySelector('[data-tour]');
-  var botoes = document.querySelectorAll('[data-cena]');
-  var viewer = null;
-  function cena(arquivo) {
-    return { type: 'equirectangular', panorama: 'assets/img/360/' + arquivo + '.jpg', hfov: 100, pitch: -4 };
-  }
-  function iniciaTour() {
-    if (viewer || !window.pannellum || !tour) return;
-    viewer = window.pannellum.viewer('tour', {
-      default: { firstScene: 'recepcao', autoLoad: true, showZoomCtrl: false, compass: false, sceneFadeDuration: 600, mouseZoom: false },
-      scenes: {
-        recepcao: cena('recepcao'),
-        rosto: cena('sala-rosto'),
-        corpo: cena('sala-corpo'),
-        unhas: cena('esmalteria')
-      }
-    });
-  }
-  botoes.forEach(function (b) {
-    b.addEventListener('click', function () {
-      iniciaTour();
-      if (!viewer) return;
-      viewer.loadScene(b.getAttribute('data-cena'));
-      botoes.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
-    });
-  });
-  if (tour) {
-    if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function (e) {
-        if (e[0].isIntersecting) { iniciaTour(); if (viewer) obs.disconnect(); }
-      }, { rootMargin: '300px 0px' });
-      obs.observe(tour);
-    } else {
-      window.addEventListener('load', iniciaTour);
-    }
-  }
-
   // O WhatsApp flutuante aparece quando os botões da abertura saem da tela
   var whats = document.querySelector('[data-whats]');
   var abertura = document.querySelector('[data-abertura]');
